@@ -1,0 +1,39 @@
+#define the selection of a single card
+import random 
+def generate_deck():
+    ranks = ("Hearts", "Spades", "Cloves", "Diamonds")
+    suits = ("Ace", "2", "3", "4", "5", "6", "7", "8", "9", "King", "Queen", "Joker", "Jack")
+    generated_rank = random.choice(ranks)
+    generated_suit = random.choice(suits)
+    
+    if generated_suit == "Joker":
+        print(generated_suit)
+    else:
+        print(generated_suit, "of", generated_rank)
+
+
+#start of the game 
+check_00 = input("Would you like to play? (Y/N) ")
+
+if check_00.upper() == "Y": 
+    generate_deck()
+    generate_deck()
+    
+if check_00.upper() == "N":
+    print("Game discontinued.")
+    exit()
+
+#the second round of drawing, draw one card at a time
+while True: 
+    check_01 = input("Would you like to draw another card? ")
+    if check_01.upper == "Y":
+        generate_deck()
+    
+    elif check_01.upper == "N":
+        print("noted.")
+        break 
+    
+    else: 
+        break 
+    
+#check if the card is <21, input cases whereby the player can win right away 
