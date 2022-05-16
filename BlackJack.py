@@ -40,13 +40,13 @@ def derive_card_total_value(list_of_cards_drawn):
         if "Joker" != s:
             if "Ace" == s:
                 if power_value_card.intersection(suit):
-                    total_sum = total_sum + 11
+                    total_sum += 11
                 else:
-                    total_sum = total_sum + 1
+                    total_sum += 1
             elif s in power_value_card:
-                total_sum = total_sum + 10
+                total_sum += 10
             else:
-                total_sum = total_sum + int(s)
+                total_sum += int(s)
     return total_sum
 
 
