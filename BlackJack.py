@@ -1,4 +1,5 @@
 import random
+from sys import exit
 
 
 def generate_deck(list_of_cards_drawn):
